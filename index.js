@@ -12,6 +12,7 @@ app.use(express.json());
 
 app.use("/api/auth", auhtRoute);
 app.use("/api/blog", blogRoutes);
+app.use("/api/message");
 
 app.get("/", (req, res) => {
   res.json({ status: true, message: "API Running" });
