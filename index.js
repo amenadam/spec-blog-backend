@@ -4,6 +4,7 @@ import cors from "cors";
 import { connectDb } from "./utils/connectDB.js";
 import auhtRoute from "./routes/auth.js";
 import blogRoutes from "./routes/blog.js";
+import messageRoute from "./routes/message.js";
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(express.json());
 
 app.use("/api/auth", auhtRoute);
 app.use("/api/blog", blogRoutes);
-app.use("/api/message");
+app.use("/api/message", messageRoute);
 
 app.get("/", (req, res) => {
   res.json({ status: true, message: "API Running" });
