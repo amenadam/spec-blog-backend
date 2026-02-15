@@ -26,7 +26,7 @@ export const getMessages = async (req, res) => {
     if (!messages)
       return res.json({ success: false, message: "No message found!" });
 
-    res.json({ success: false, message: "Messages fetched", messages });
+    res.json({ success: true, message: "Messages fetched", messages });
   } catch (error) {
     res.json({
       success: false,
